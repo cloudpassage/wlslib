@@ -11,15 +11,18 @@ If you have questions about this library, please contact the author.
 
 ##Requirements and Dependencies
 
-In addition to Ruby, this library and the tools built on it require a number of Ruby gems. Use the following command to install all gems needed by CloudPasssage API clients:
+To run, this script requires:
+
+* Ruby installed on the host on which the script runs
+* A number of Ruby gems. Use the following command to install all gems needed by CloudPasssage API clients:
 
     sudo gem install oauth2 rest-client json public_suffix ip
 
 
 ##List of Files
 
-* wlslib.rb -- *The library*
-* README.md -- *This readme file*
+* **wlslib.rb**  -  The library
+* **README.md**  -  This ReadMe file
 
 
 ##Installation 
@@ -31,7 +34,7 @@ Place this library in the same directory as the programs that will be calling it
 
 The library includes the following functions:
 
-* **api_live**: Verifies that a firewall zone with a specific name and value exists.
+* **api_live**: Verifies that API calls can be made successfully -- that Internet connectivity exists, that the local firewall allows outbound requests, and that the supplied API key values are valid.
 
 * **get_group_names**: Returns the name and group ID for all defined server groups. 
 
@@ -43,13 +46,13 @@ The library includes the following functions:
 
 * **api_post**: Performs an HTTPS POST call to modify the content of an API object specified by URL, replacing it with the supplied payload object.
 
-* **cached_api_get**: 
+* **cached_api_get**: Places API get calls, and for calls to get events, caches the results in ~/api_cache.  If the same request for events is placed twice, the response json is pulled from the local cache, significantly improving event-retrieval performance.
 
 * **get_parent_domain**: returns the name of the domain that a specified IP address belongs to.
 
 * **cleanup_parent_domain**: Allows you to specify substitutions for specific domain names. 
 
-* **load_api_keys**: Loads the specified API key into an API key file.
+* **load_api_keys**: Reads all API keys from a Halo API key file, usually /etc/halo-api-keys.
 
 * **get_auth_token**: Authenticates to the API and retrieves an access token.
 
@@ -58,6 +61,7 @@ The library includes the following functions:
 * **process_return_code**: Provides error messages to display to the caller when an API call fails.
 
 * **append_to_file**: Appends the specified API object as JSON to the specified file, creating the file if necessary.
+
 
 
 ##License
