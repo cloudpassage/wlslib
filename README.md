@@ -93,4 +93,5 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <!---
 #CPTAGS:community-supported api-example integration automation
+#TBICON:images/ruby_icon.png
 -->
