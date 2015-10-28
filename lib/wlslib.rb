@@ -33,7 +33,6 @@
 require 'json'
 require 'oauth2'
 require 'rest-client'
-require 'resolv'
 require 'public_suffix'
 #======== End of Loadable modules
 
