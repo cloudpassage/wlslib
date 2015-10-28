@@ -8,6 +8,16 @@ This is a library of useful routines that make calls to the CloudPassage API. Yo
 
 If you have questions about this library, please contact the author.
 
+####Note:
+Some older tools which require this library look for a file in the local directory or in your PATH named wlslib.rb.  You can still place that file as directed, it's located at lib/wslib.rb.  Building this as a gem is confirmed to work on Ruby 2.2.0 and under most circimstances you can change the line that looks like this:
+'''
+load 'wlslib.rb'
+'''
+to:
+'''
+require 'wlslib'
+'''
+to get the tool to work with the gem loaded.
 
 ##Requirements and Dependencies
 
